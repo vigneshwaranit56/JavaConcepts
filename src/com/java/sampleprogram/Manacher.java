@@ -44,9 +44,6 @@ public class Manacher {
                 p = i;
         }
 
-        for (int i = 0; i < LPS.length; i++) {
-			System.out.println(LPS[i]);
-		}
         // find the palindrome with the biggest span
         int valueMax = 0;
         int indexMax = 0;
