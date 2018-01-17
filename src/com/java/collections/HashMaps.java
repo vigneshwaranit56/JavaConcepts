@@ -55,8 +55,8 @@ System.out.println(hmap);
 	      
 	      
 	      
-	      
-	      for(Map.Entry<Integer,String> eMap:map.entrySet()){
+	      HashMap<Integer,String> hashMap =(HashMap<Integer, String>) sortByValue(hmap);
+	      for(Map.Entry<Integer,String> eMap:hashMap.entrySet()){
 	    	  System.out.println("key is: "+eMap.getKey()+" & Value is "+eMap.getValue());
 	      }
 	      
@@ -64,24 +64,24 @@ System.out.println(hmap);
 	    
 	}
 	
-	 private static Map<String, Integer> sortByValue(Map<String, Integer> unsortMap) {
+	 private static HashMap<Integer,String> sortByValue(HashMap<Integer,String> unsortMap) {
 
 	        // 1. Convert Map to List of Map
-	        List<Map.Entry<String, Integer>> list =
-	                new LinkedList<Map.Entry<String, Integer>>(unsortMap.entrySet());
+	        List<Map.Entry<Integer,String>> list =
+	                new LinkedList<Map.Entry<Integer,String>>(unsortMap.entrySet());
 
 	        // 2. Sort list with Collections.sort(), provide a custom Comparator
 	        //    Try switch the o1 o2 position for a different order
-	        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-	            public int compare(Map.Entry<String, Integer> o1,
-	                               Map.Entry<String, Integer> o2) {
+	        Collections.sort(list, new Comparator<Map.Entry<Integer,String>>() {
+	            public int compare(Map.Entry<Integer,String> o1,
+	                               Map.Entry<Integer,String> o2) {
 	                return (o1.getValue()).compareTo(o2.getValue());
 	            }
 	        });
 
 	        // 3. Loop the sorted list and put it into a new insertion order Map LinkedHashMap
-	        Map<String, Integer> sortedMap = new HashMap<String, Integer>();
-	        for (Map.Entry<String, Integer> entry : list) {
+	        HashMap<Integer,String> sortedMap = new HashMap<Integer,String>();
+	        for (Map.Entry<Integer,String> entry : list) {
 	            sortedMap.put(entry.getKey(), entry.getValue());
 	        }
 
