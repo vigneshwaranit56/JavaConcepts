@@ -7,6 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.Map.Entry;
+import java.util.Scanner;
 
 public class LinkedHashMaps {
 
@@ -43,7 +44,12 @@ public class LinkedHashMaps {
         lchmap.put(1, new Student(103, "Zues", 18));
         lchmap.put(2, new Student(104, "Zues", 16));
         lchmap.put(100,new Student(105, "Zues", 29));
-       
+
+        Scanner s = new Scanner(System.in);
+        int m = s.nextInt();
+        
+        
+        
         
       
 	}
