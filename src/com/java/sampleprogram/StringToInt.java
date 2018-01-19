@@ -12,6 +12,8 @@ public class StringToInt {
 
 		double st = stringToint("25");
 		System.out.println(st);
+		
+		
 
 	}
 
