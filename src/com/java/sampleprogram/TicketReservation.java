@@ -31,7 +31,7 @@ public class TicketReservation {
 			case 1:
 				System.out.println("enter your name");
 				String name = s.next();
-				System.out.println("enter your name");
+				System.out.println("enter your age");
 				int age = s.nextInt();
 				int ticketNo = bookTicket(name, age);
 
@@ -75,8 +75,9 @@ public class TicketReservation {
 
 	private static void checkAvailability() {
 
-		for (int i = 1; i <= passengers.length; i++) {
+		for (int i = 1; i <= seatCount; i++) {
 			Passenger passenger = passengers[i];
+			
 			if(passenger != null)
 			System.out.println("seat no =" + i + " booked =" + passenger.isIsbooked());
 			else
