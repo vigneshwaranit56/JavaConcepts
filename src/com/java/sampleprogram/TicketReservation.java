@@ -6,11 +6,9 @@ import com.java.Exception.MyException;
 
 public class TicketReservation {
 
-	final static int seatCount = 12;
+	final static int seatCount = 13;
 	static Passenger[] passengers = new Passenger[seatCount];
 	static int top = 0;
-
-	
 
 	public static boolean isFull() {
 		return top == seatCount;
@@ -75,14 +73,14 @@ public class TicketReservation {
 
 	private static void checkAvailability() {
 
-		for (int i = 1; i <= seatCount; i++) {
+		for (int i = 1; i < seatCount; i++) {
 			Passenger passenger = passengers[i];
-			
-			if(passenger != null)
-			System.out.println("seat no =" + i + " booked =" + passenger.isIsbooked());
+
+			if (passenger != null)
+				System.out.println("seat no = " + i + " booked = " + (passenger.isIsbooked() ? "yes" : "no"));
 			else
-				System.out.println("seat no =" + i + " booked =" + false);
-				
+				System.out.println("seat no = " + i + " booked = " + "book now!!");
+
 		}
 
 	}
@@ -100,15 +98,13 @@ public class TicketReservation {
 		if (isFull())
 			throw new MyException("all tickets are booked");
 		int check = isChceck();
-		
 
-		
 		if (check != -1) {
 			Passenger passenger = new Passenger(name, age, check, true);
 			passengers[check] = passenger;
 			return check;
 		}
-		
+
 		++top;
 
 		Passenger passenger = new Passenger(name, age, top, true);
@@ -123,7 +119,7 @@ public class TicketReservation {
 
 		for (int i = 1; i <= top; i++) {
 			Passenger passenger = passengers[i];
-			System.out.println(i+" index");
+			System.out.println(i + " index");
 			System.out.println(passenger.isIsbooked());
 
 			if (!passenger.isIsbooked())

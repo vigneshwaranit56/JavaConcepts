@@ -3,10 +3,14 @@ package com.java.sampleprogram;
 public class ExerciseClasss {
 	
 	  public int x;
+	  
+	  
 	 	private int y;
 	        void cal(int a, int b){
 	            x =  a + 1;
 	            y =  b;
+	            int i =0;
+	            i = i++ + i;
 	        }
 	public static void main(String[] args) {
 
