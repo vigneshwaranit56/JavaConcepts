@@ -7,15 +7,41 @@ public class BracatMatchingStack {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String exp =sc.next();
+		int n =sc.nextInt();
 		
-boolean val =balanceBracket(exp);
-
-System.out.println(val?"yes":"no");
+		String[] s = new String[n];
+		
+		for (int i = 0; i < n; i++) 
+			s[i] = sc.next();
+		
+		for(String ss:braces(s))
+			System.out.println(ss);
+	
 
 sc.close();
 
 	}
+	
+static String[] braces(String[] values) {
+	String[] strArr = new String[values.length];
+	int i = -1;
+	for (String string : values) {
+		
+		boolean val =balanceBracket(string);
+		i++;
+		if(val)
+			strArr[i] = "YES";
+		else
+			strArr[i] = "NO";
+		
+	}
+	
+	
+	
+	return strArr;
+
+        
+    }
 
 	private static boolean balanceBracket(String exp) {
 		Stack<Character>  stk= new Stack<Character>();
