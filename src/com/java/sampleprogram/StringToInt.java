@@ -8,11 +8,12 @@ public class StringToInt {
 	 * @throws Exception
 	 */
 	public static void main(String args[]) throws Exception {
+//		
+//
+//		double st = stringToint("25");
+//		System.out.println(st);
 		
-
-		double st = stringToint("25");
-		System.out.println(st);
-		
+		System.out.println(2500/Math.pow(10, 2));
 		
 
 	}
@@ -41,7 +42,7 @@ public class StringToInt {
 			int n = str.charAt(i);
 
 			if (n < 48) {
-				System.out.println(i + "index"); // skipping . and - cascii
+				System.out.println(i + "index"); // skipping . and - ascii
 													// values
 				continue;
 			}

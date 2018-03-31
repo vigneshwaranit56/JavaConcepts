@@ -1,5 +1,7 @@
 package com.java.sampleprogram;
 
+import java.util.HashSet;
+
 public class ManachersAlgorithm {
 
 	public static void main(String[] args) {
@@ -27,8 +29,16 @@ public class ManachersAlgorithm {
         int p = 0;
         for (int i = 1; i <= arrLength; i++) {
         	LPS[i] =0;
-        	 if (LPS[p] + p >= i)            	
+        	 if (LPS[p] + p >= i)     {    
+        		 System.out.println(i+" --");
+        		 System.out.println(p+" --");
+        		 System.out.println(LPS[2 * p - i]);
+        		 System.out.println();
+
+        		 
                  LPS[i] = Math.min(LPS[2 * p - i], p + LPS[p] - i);
+                 
+        	 }
              while (i + LPS[i] + 1 <= arrLength && i - LPS[i] - 1 >= 0 && ch[i + LPS[i] + 1] == ch[i - LPS[i] - 1])
                  LPS[i]++;
              if (p + LPS[p] < i + LPS[i])

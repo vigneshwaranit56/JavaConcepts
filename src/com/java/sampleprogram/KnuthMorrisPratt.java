@@ -29,7 +29,7 @@ public class KnuthMorrisPratt {
      * @return maximal length of prefix-suffix for each prefix of the string text
      */
     public static List<Integer> getPrefSufTable(String text) {
-
+    															
         final List<Integer> prefSufTable = new ArrayList<Integer>();
         final char[] chars = text.toCharArray();
 
@@ -40,6 +40,7 @@ public class KnuthMorrisPratt {
 
         for (int i = 1; i<chars.length; i++) {
             int sizeOfPrefSuf = prefSufTable.get(i-1);
+            System.out.println(sizeOfPrefSuf);
             while (sizeOfPrefSuf > 0 && (chars[i] != chars[sizeOfPrefSuf]))
                 sizeOfPrefSuf = prefSufTable.get(sizeOfPrefSuf-1); // because string is 0-indexed
 

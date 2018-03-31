@@ -12,9 +12,9 @@ public class SingleInheritance extends BaseClass {
 
 	public static void main(String[] args) {
 	
-		SingleInheritance singleInheritance = new SingleInheritance();
+		BaseClass singleInheritance = new SingleInheritance();
 		singleInheritance.shape("circle");
-		singleInheritance.areaaOfCircle(5);
+//		singleInheritance.areaaOfCircle(5);
 		singleInheritance.disp("circle");
 		
 		

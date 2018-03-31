@@ -9,4 +9,10 @@ public interface Interface {
 	 * only public access modifier used and final and static variable in it
 	 */
 
+	public default String emPtyString(){
+		
+		
+		return null;
+		
+	}
 }

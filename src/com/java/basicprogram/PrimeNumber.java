@@ -32,6 +32,9 @@ public class PrimeNumber {
 		}
 
 		s.close();
+		        
+		     
+		    
 
 	}
 }

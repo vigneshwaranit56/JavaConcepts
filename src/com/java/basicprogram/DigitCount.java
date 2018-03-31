@@ -5,12 +5,25 @@ import java.util.Scanner;
 public class DigitCount {
 
 	public static void main(String[] args) {
-	Scanner s = new Scanner(System.in);
-	String txt = s.next();
+//	Scanner s = new Scanner(System.in);
+//	String txt = s.next();
+//	
+//	digiCount(txt);
+	digitCount(565678);
 	
-	digiCount(txt);
-	
-	s.close();
+//	s.close();
+	}
+
+	private static int digitCount(int number) {
+		int length = 0;
+		long temp = 1;
+		while (temp <= number) {
+		    length++;
+		    temp *= 10;
+		}
+		System.out.println(length);
+		return length;
+		
 	}
 
 	private static void digiCount(String txt) {
