@@ -13,7 +13,7 @@ public class Trie {
    }
    public void insert(String word)
    {
-       if (search(word) == true) 
+       if (search(word)) 
            return;        
        TrieNode current = root; 
        for (char ch : word.toCharArray() )
@@ -41,7 +41,7 @@ public class Trie {
            else
                current = current.subNode(ch);
        }      
-       if (current.isEnd == true) 
+       if (current.isEnd) 
            return true;
        return false;
    }
@@ -109,8 +109,15 @@ public class Trie {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
+	Trie t = new Trie();
+	t.insert("ilike");
+	t.insert("iam");
+	t.insert("alive");
+	System.out.println(t.search("i"));
+		
+	
+	
 	}
 
 }

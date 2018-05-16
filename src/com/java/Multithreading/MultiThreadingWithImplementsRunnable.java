@@ -15,7 +15,8 @@ public class MultiThreadingWithImplementsRunnable implements Runnable {
 	 *   we can use MIN_PRIORITY, NORM_PRIORITY or MAX_PRIORITY.
 	 *  */
 	
-	 /**  Synchronization
+	 /**
+	  *   Synchronization
 	 *   
 	 *   Multithreading introduces asynchronous behavior to the programs. 
 	 *   If a thread is writing some data another thread may be reading the same data at that time. This may bring inconsistency.

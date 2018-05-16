@@ -49,18 +49,19 @@ class Graph{
 	
 	public void dfs(){
 		vertexList[0].visited =true;
-		displayVertex(0);
-		theStack.push(0);
+		displayVertex(1);
+		theStack.push(1);
 		while(!theStack.isEmpty()){
 			// getting unvisited vertex adjacent to stack top
 			int v = getAdjUnvistedVerstex((int) theStack.peek());
-			if(v == -1)
+			if(v == -1){
 				theStack.pop();
-			else
+			
+			}else{
 				vertexList[v].visited = true;
 			
-			displayVertex(v);
 			theStack.push(v);
+			}
 			
 		}
 		
@@ -72,7 +73,6 @@ class Graph{
 	}
 
 	private int getAdjUnvistedVerstex(int v) {
-		System.out.println(-1);
 		for (int i = 0; i < vertexCount; i++) 
 			if(adjMatrix[v][i] == 1 && vertexList[i].visited == false)
 				return i;

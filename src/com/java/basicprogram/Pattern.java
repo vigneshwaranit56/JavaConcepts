@@ -4,7 +4,7 @@ public class Pattern {
 
 	public static void main(String[] args) {
 
-		int start = 3;
+		int start = 4;
 
 		int index = 3;
 		

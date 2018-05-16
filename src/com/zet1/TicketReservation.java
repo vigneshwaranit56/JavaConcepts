@@ -1,8 +1,9 @@
-package com.java.sampleprogram;
+package com.zet1;
 
 import java.util.Scanner;
 
 import com.java.Exception.MyException;
+import com.java.sampleprogram.Passenger;
 
 public class TicketReservation {
 
