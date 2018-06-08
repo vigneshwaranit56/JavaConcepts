@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
 
 /**
  * This class implements KMP algorithm for finding length of maximal prefix-suffix for each prefix of the string.

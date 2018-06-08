@@ -12,6 +12,7 @@ public class ConstantsHttp {
 	
 	public static final String CONTENT_TYPE = "Content-Type";
 	public static final String CONTENT_TYPE_VALUE = "application/json";
+	public static final String DATE_FORMAT = "yyyy-MM-dd";
 	
 
 	

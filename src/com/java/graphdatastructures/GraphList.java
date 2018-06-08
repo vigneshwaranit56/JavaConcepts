@@ -5,7 +5,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import sun.misc.Queue;
+import com.java.datastructures.Queue;
+
 
 public class GraphList {
 
@@ -42,7 +43,7 @@ public class GraphList {
 
 	}
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws Exception {
 
 		GraphList g = new GraphList(5);
 
@@ -76,15 +77,20 @@ public class GraphList {
 
 	}
 
-	private void bfs(Integer node) throws InterruptedException {
+	private void bfs(Integer node) throws Exception {
 
 		visited[node] = true;
-		Queue<Integer> queue = new Queue<Integer>();
+		Queue queue = new Queue(numVertices);
 
-		queue.enqueue(node);
+		try {
+			queue.enque(node);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		while (!queue.isEmpty()) {
-			Integer el = queue.dequeue();
+			Integer el = queue.deque();
 			System.out.print(el + " vertex ");
 
 			Iterator<Integer> itr = adjLists[el].iterator();
@@ -93,7 +99,7 @@ public class GraphList {
 				Integer adj = itr.next();
 
 				if (!visited[adj]) {
-					queue.enqueue(adj);
+					queue.enque(adj);
 					visited[adj] = true;
 				}
 			}
