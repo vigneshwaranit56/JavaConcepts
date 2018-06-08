@@ -19,25 +19,32 @@ public class Queue {
 		if(isFull())
 			throw new Exception("overflow");
 		
+		
 		arr[++rear] = element;
 	}
 	
 	public int deque() throws Exception{
 		if(isEmpty())
 			throw new Exception("underflow");
+
 		int index = ++front;
 		int deque = arr[index];
 		arr[index] =0;
+		System.out.println("front"+front);
 		return deque;
 	}
 	
 	public boolean isEmpty(){
-		return front == rear;
+		System.out.println("front"+front);
+		System.out.println("rear"+rear);
+
+		System.out.println(front == rear);
+		return front == rear && front == size-1;
 		
 	}
 	
 	public boolean isFull(){
-		return rear == size-1;
+		return rear == size-1 ;
 		
 	}
 	
@@ -51,8 +58,9 @@ public class Queue {
 	
 	public void display(){
 		for (int i = 0; i < arr.length; i++) {
-			System.out.println(arr[i]);
+			System.out.print(" "+arr[i]);
 		}
+		System.out.println(); 
 	}
 	public static void main(String[] args) throws Exception {
 		Queue queue = new Queue(5);
@@ -61,15 +69,18 @@ public class Queue {
 		queue.enque(3);
 		queue.enque(2);
 		queue.enque(1);
+		queue.deque();
+		queue.deque();
+		queue.deque();
+		
+		System.out.println(queue.rear());
+		System.out.println(queue.front());
+		
 		
 		
 		queue.display();
 		
-		queue.deque();
 
-		queue.deque();
-		queue.deque();queue.deque();queue.deque();queue.deque();
-		queue.display();
 		
 		System.out.println(queue.rear());
 		System.out.println(queue.front());
