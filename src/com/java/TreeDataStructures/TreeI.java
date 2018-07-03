@@ -1,6 +1,6 @@
 package com.java.TreeDataStructures;
 
-public interface TreeI<T> {
+public interface TreeI {
 
 	public  void preOrder(TNode node);
 

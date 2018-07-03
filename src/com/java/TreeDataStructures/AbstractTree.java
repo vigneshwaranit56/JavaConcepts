@@ -4,9 +4,8 @@ import java.util.ArrayDeque;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public abstract class AbstractTree<T> implements TreeI<T> {
+public abstract class AbstractTree implements TreeI {
 
-	@Override
 	public void postOrder(TNode t) {
 
 		if (t != null) {
@@ -18,24 +17,22 @@ public abstract class AbstractTree<T> implements TreeI<T> {
 
 	}
 
-	@Override
 	public void inOrder(TNode t) {
 		if (t != null) {
-			postOrder(t.left);
+			inOrder(t.left);
 			System.out.print(t.value);
-			postOrder(t.right);
+			inOrder(t.right);
 
 		}
 
 	}
 
-	@Override
 	public void preOrder(TNode t) {
 
 		if (t != null) {
 			System.out.print(t.value);
-			postOrder(t.left);
-			postOrder(t.right);
+			preOrder(t.left);
+			preOrder(t.right);
 
 		}
 	}

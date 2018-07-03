@@ -14,6 +14,7 @@ public TNode(Integer value) {
 		right = null;
 	}
 
+
 	public Integer getValue() {
 		return value;
 	}
